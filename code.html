@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WEBSITE BRIDGE | Architectural Digital Precision</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "inverse-on-surface": "#313030",
+                        "secondary": "#c8c6c5",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-dim": "#141313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-error": "#690005",
+                        "on-primary": "#2f3131",
+                        "primary-container": "#e2e2e2",
+                        "surface-variant": "#353434",
+                        "primary": "#ffffff",
+                        "surface-tint": "#c6c6c7",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-background": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#56657c",
+                        "surface-container-highest": "#353434",
+                        "on-secondary": "#313030",
+                        "secondary-container": "#4a4949",
+                        "background": "#141313",
+                        "tertiary": "#ffffff",
+                        "outline": "#8e9192",
+                        "on-secondary-container": "#bab8b7",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-primary-fixed": "#1a1c1c",
+                        "on-tertiary": "#213145",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-secondary-fixed-variant": "#474646",
+                        "tertiary-container": "#d3e4fe",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-fixed": "#e2e2e2",
+                        "outline-variant": "#444748",
+                        "on-surface-variant": "#c4c7c8",
+                        "on-primary-container": "#636565",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "surface": "#141313",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "inverse-primary": "#5d5f5f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "margin-mobile": "24px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-4px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="font-body-md bg-background selection:bg-primary selection:text-background antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/50 dark:bg-surface/50 backdrop-blur-xl border-b border-white/10">
+<div class="flex justify-between items-center px-margin-desktop py-unit-3 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img src="logo.jpeg" alt="Website Bridge Logo" class="h-10 w-10 rounded-full object-cover border border-white/20"/>
+<div class="font-headline-lg text-headline-lg tracking-tighter text-primary dark:text-primary hidden sm:block">
+                WEBSITE BRIDGE
+            </div>
+</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md uppercase tracking-[0.2em] text-on-surface-variant/70 font-medium hover:text-primary transition-colors duration-300" href="#clients">Services</a>
+<a class="font-body-md text-body-md uppercase tracking-[0.2em] text-on-surface-variant/70 font-medium hover:text-primary transition-colors duration-300" href="#samples">Samples</a>
+<a class="font-body-md text-body-md uppercase tracking-[0.2em] text-on-surface-variant/70 font-medium hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+<button onclick="document.getElementById('contact-modal').classList.remove('hidden')" class="ml-4 px-6 py-2 bg-primary text-background font-label-sm uppercase tracking-widest rounded-lg hover:bg-secondary transition-all">
+                    Let's Build
+                </button>
+</nav>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex flex-col md:flex-row items-center justify-between overflow-hidden px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-20">
+<div class="relative z-10 w-full md:w-[38.2%] space-y-unit-4 text-left">
+<h1 class="font-display-lg text-[40px] md:text-display-lg leading-none tracking-tighter animate-pulse">
+                    WEBSITE BRIDGE
+                </h1>
+<p class="font-headline-xl text-headline-lg md:text-[32px] md:leading-[40px] text-secondary">
+                    Architecting digital experiences with precision.
+                </p>
+<div class="pt-unit-8">
+<a class="inline-flex items-center px-12 py-5 bg-white text-black font-label-sm uppercase tracking-[0.2em] rounded-lg hover:scale-105 transition-transform duration-500" href="#samples">
+                        Explore Samples
+                    </a>
+</div>
+</div>
+<div class="relative z-0 w-full md:w-[61.8%] h-[50vh] md:h-full flex items-center justify-center">
+<!-- STITCH_THREEJS_START:ANIMATION_3 class="w-full h-full opacity-60" -->
+<div class="w-full h-full opacity-60" style="display:block; position:relative;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_3" style="width:100%;height:100%; position:absolute; inset:0;"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_3');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  
+const width = container.clientWidth || window.innerWidth * 0.618;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+// Create a wireframe/point globe for a "digital" look
+const geometry = new THREE.SphereGeometry(2.5, 32, 32);
+const material = new THREE.PointsMaterial({
+  color: 0x888888,
+  size: 0.05,
+  transparent: true,
+  opacity: 0.8
+});
+
+const globe = new THREE.Points(geometry, material);
+scene.add(globe);
+
+// Add a wireframe overlay for structure
+const wireframeGeometry = new THREE.SphereGeometry(2.51, 24, 24);
+const wireframeMaterial = new THREE.MeshBasicMaterial({
+  color: 0x444444,
+  wireframe: true,
+  transparent: true,
+  opacity: 0.3
+});
+const wireframe = new THREE.Mesh(wireframeGeometry, wireframeMaterial);
+scene.add(wireframe);
+
+camera.position.z = 6;
+
+// Handle resize
+window.addEventListener('resize', () => {
+  const newWidth = container.clientWidth;
+  const newHeight = container.clientHeight;
+  camera.aspect = newWidth / newHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(newWidth, newHeight);
+});
+
+function animate() {
+  requestAnimationFrame(animate);
+  globe.rotation.y += 0.003;
+  globe.rotation.x += 0.001;
+  wireframe.rotation.y += 0.003;
+  wireframe.rotation.x += 0.001;
+  renderer.render(scene, camera);
+}
+
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_3 -->
+</div>
+<div class="absolute bottom-unit-8 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+<span class="material-symbols-outlined text-4xl">expand_more</span>
+</div>
+</section>
+
+<!-- Clients / Partners Section -->
+<section id="clients" class="py-12 bg-surface-container border-y border-white/10 overflow-hidden relative hidden">
+    <div class="px-margin-mobile md:px-margin-desktop mb-8 max-w-container-max mx-auto flex justify-between items-end">
+        <div>
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-2">Our Partners</span>
+            <h2 class="font-headline-lg text-headline-lg">Trusted By <span id="client-count" class="text-primary">(0)</span></h2>
+        </div>
+    </div>
+    <!-- Infinite Drag/Scroll Slider -->
+    <div class="relative w-full overflow-hidden cursor-grab active:cursor-grabbing" id="slider-container">
+        <div class="flex gap-12 px-margin-mobile md:px-margin-desktop items-center transition-transform duration-300 ease-out" id="slider-track" style="width: max-content;">
+            <!-- Client items injected by JS -->
+        </div>
+    </div>
+</section>
+
+<!-- Samples Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="samples">
+<div class="mb-unit-12 flex flex-col md:flex-row md:items-end justify-between gap-gutter">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary border-b border-primary pb-2 mb-4 block w-fit">PORTFOLIO</span>
+<h2 class="font-headline-xl text-headline-xl">Curated Blueprints</h2>
+</div>
+<p class="font-body-lg text-body-lg text-secondary max-w-md">
+                    Explore our recent architectural interventions in the digital landscape. Each project is a testament to structural integrity and aesthetic clarity.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Photographer Portfolio -->
+<div class="glass-card p-unit-6 flex flex-col gap-unit-4 group">
+<div class="aspect-video overflow-hidden rounded-xl bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" data-alt="A sophisticated photography studio interior with high-end camera equipment on tripods, soft diffused lighting coming from large windows, and a monochrome aesthetic. The space is minimalist with concrete floors and white walls, creating a clean, professional atmosphere that emphasizes artistic focus and technical excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_8h0oXFTedz8k3-bg8tc9KNJxdwIWzKrYGfpZujFfM5LCfaPTBW04yZ6Asst94b4BTemIS_Y_zR6XR20QbuETPzrmlD-4XOvRxog5AtAm4pEZhPUhNM2sH3X5PBNNlRMIQhc2MClPsFVzi4JXyMx2KAsFh68amY8-mah4KsXjx-qGgPrE3vt96F4oM1MdVlWSUn1LVfT00A1Q-LxtfSWXBeDMQ830zzKS6NHyBaSmnK0xFCddGS0_aLXcfAYpv8bNhN7Citl4jdg"/>
+</div>
+<div class="flex justify-between items-start pt-unit-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-1">Portfolio</span>
+<h3 class="font-headline-lg text-headline-lg">Photographer Portfolio</h3>
+<p class="font-body-md text-on-surface-variant">Editorial layout for visual storytellers.</p>
+</div>
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Interior Designer Landing Page -->
+<div class="glass-card p-unit-6 flex flex-col gap-unit-4 group">
+<div class="aspect-video overflow-hidden rounded-xl bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" data-alt="A high-end modern living room featuring sleek, architectural furniture, large floor-to-ceiling glass windows overlooking a serene garden, and a neutral color palette. The design uses natural materials like stone and dark wood, illuminated by soft recessed lighting that highlights the clean lines and luxurious textures of the interior space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUF_c0hxYf-AFKVLAQ_btyNbmh4jTynb4r0_bnFVexjYBnDie16zaQDO6NT_4ps3EWGAZwxkVYGsy9D84RyfLJaI3dOPIgnbrdGlHm04nLPNEnIE-CcfZkLO9fxZX8wgqQYe2n3z4RB2ZysS-txWkA-int4GipbH_rKDBSM4xFlvaxLueex7P3Zc-PfgjS_Si7lFc_jJ0o82j8v5KuXQcfLjWdi-Db8t1lENBlk5JaNMICRRB1kIa9ALEOMlWLLqeII6PhAmV8dHY"/>
+</div>
+<div class="flex justify-between items-start pt-unit-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-1">Landing Page</span>
+<h3 class="font-headline-lg text-headline-lg">Interior Designer</h3>
+<p class="font-body-md text-on-surface-variant">Spatial awareness translated to web.</p>
+</div>
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Local Bakery Business Web -->
+<div class="glass-card p-unit-6 flex flex-col gap-unit-4 group">
+<div class="aspect-video overflow-hidden rounded-xl bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" data-alt="An artisanal bakery with rustic wooden shelves displaying fresh loaves of sourdough bread, artisan pastries, and sacks of flour. The lighting is warm and inviting, coming from vintage Edison bulbs, casting long shadows across the textured surfaces. The atmosphere is cozy and grounded, reflecting a high-quality local business aesthetic with monochromatic charm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtz-Zq2WKubsm6C4HBDTkZj9fKdCV6PSGffFTjohQycF96s9-09O6EWkM24hG6nLnQxQf2xkHNpA5eGd6k2CT09MAmCYcwNIyOj5sPDzYoCsVBK76oqv311qWvvpgzCQ4aMWmMXMTtUeE3cfZF1IhONjuxs5-E5yM8EJLOW5mR7xJLpaa31t3LSI58k7PUQG-RkKaCP0Otuez8ePOUGPLvQsvs3xcxzDo0bT9f5EWpRaZmynNdMVqAd1hWwKtsfQJtNOF2CVxlgs8"/>
+</div>
+<div class="flex justify-between items-start pt-unit-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-1">Business Page</span>
+<h3 class="font-headline-lg text-headline-lg">Bakery Business</h3>
+<p class="font-body-md text-on-surface-variant">Artisanal digital storefronts.</p>
+</div>
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Clothing Brand E-commerce -->
+<div class="glass-card p-unit-6 flex flex-col gap-unit-4 group">
+<div class="aspect-video overflow-hidden rounded-xl bg-surface-container-high relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0" data-alt="A minimalist fashion boutique with sleek metal clothing racks and monochrome garments hanging in perfect alignment. The shop features polished concrete floors, expansive white walls, and bright, surgical-style studio lighting that creates high contrast and deep blacks. The scene conveys a sense of high-fashion luxury and strict architectural design principles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmIz6V3sAJ2uWwSgaff6nTNWNp_aTx_49j0WrYT03U0jQqXSFi5wkmSa43BqeAXgYmBAsTNvIgvsCtOT6QekOYRE4NSKbJjqMJ45NC6bgbaqngPahoVaRswZuJw023m6BcbYe3KhzXjTDcS-Ri2zajioUlZEfyikWBbFDS9Er8d_XpcUjCynJVLzMpb-fjeTX9eRkpn5WUspjGfOYCp-dBrnn80xBWqRGx3kaylCVCQXM7LAiu8X3Tz5sGjanQ3Obc4eZbG-1uYj4"/>
+</div>
+<div class="flex justify-between items-start pt-unit-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-1">E-commerce Web</span>
+<h3 class="font-headline-lg text-headline-lg">Clothing Brand</h3>
+<p class="font-body-md text-on-surface-variant">High-conversion editorial commerce.</p>
+</div>
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact/Direct Access Section -->
+<section class="relative py-section-gap bg-surface-container-lowest overflow-hidden" id="contact">
+<!-- Subtle Watermark -->
+<div class="absolute right-0 bottom-0 opacity-5 w-1/3 pointer-events-none select-none">
+<img alt="Watermark" class="w-full h-full object-contain grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzPx1qbjZWaL70tDJSs64c0jEtY1ts6PPghx97jA1WhOaWKjRpt8KnkDSUeolT6nRgIaQ-GaWgMcM1Ad0cF6a2-Guj7tsNa_Bvoq_EhmJVRTufWYu60llRJ7a-WpRaoi4BcUtWc47s0VSAWN29WZMmlWHIbx5GtTqfXXfnYqzyn25ETH9teYgWuoBbY_PKBVhBY6sp2x-8OVsdCqdqmJVb-lsv3jYNWIYb2Tn2cDqskDyszXPaEyAK8Gh8nf2ap_5NyhPqRZj1kY8"/>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-section-gap">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-primary mb-unit-4 block">GET IN TOUCH</span>
+<h2 class="font-display-lg text-headline-xl md:text-display-lg mb-unit-8 leading-tight">Let's Connect</h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim max-w-md">
+                        Our bridge is always open for ambitious projects. Reach out directly via any of the channels below.
+                    </p>
+</div>
+<div class="space-y-gutter flex flex-col justify-center">
+<a class="flex items-center gap-unit-4 group" href="tel:+919363157158">
+<div class="p-4 rounded-full border border-white/10 group-hover:border-primary group-hover:bg-primary group-hover:text-black transition-all">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<p class="font-label-sm uppercase tracking-widest text-on-surface-variant">Phone</p>
+<p class="font-headline-lg text-primary">+91 9363157158</p>
+</div>
+</a>
+<a class="flex items-center gap-unit-4 group" href="https://wa.me/919363157158" target="_blank">
+<div class="p-4 rounded-full border border-white/10 group-hover:border-primary group-hover:bg-primary group-hover:text-black transition-all">
+<!-- WhatsApp SVG -->
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</div>
+<div>
+<p class="font-label-sm uppercase tracking-widest text-on-surface-variant">WhatsApp</p>
+<p class="font-headline-lg text-primary">+91 9363157158</p>
+</div>
+</a>
+<a class="flex items-center gap-unit-4 group" href="https://instagram.com/websitebridge" target="_blank">
+<div class="p-4 rounded-full border border-white/10 group-hover:border-primary group-hover:bg-primary group-hover:text-black transition-all">
+<!-- Instagram SVG -->
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+</div>
+<div>
+<p class="font-label-sm uppercase tracking-widest text-on-surface-variant">Instagram</p>
+<p class="font-headline-lg text-primary">@websitebridge</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-xl text-headline-xl text-primary dark:text-primary tracking-tighter">
+                    WEBSITE BRIDGE
+                </div>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim">
+                    © 2024 WEBSITE BRIDGE. ARCHITECTURAL PRECISION.
+                </p>
+</div>
+<div class="flex flex-col gap-unit-2">
+<h4 class="font-label-sm uppercase tracking-widest text-on-surface mb-unit-2">Portfolio</h4>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim hover:text-primary transition-opacity duration-300" href="#">Photographer Portfolio</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim hover:text-primary transition-opacity duration-300" href="#">Interior Designer Landing Page</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim hover:text-primary transition-opacity duration-300" href="#">Local Bakery Business Web</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim hover:text-primary transition-opacity duration-300" href="#">Clothing Brand E-commerce</a>
+</div>
+<div class="flex flex-col gap-unit-2">
+<h4 class="font-label-sm uppercase tracking-widest text-on-surface mb-unit-2">Contact</h4>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim hover:text-primary transition-opacity duration-300" href="tel:+919363157158">+91 9363157158</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim hover:text-primary transition-opacity duration-300" href="mailto:websitebridge@outlook.com">websitebridge@outlook.com</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed-dim hover:text-primary transition-opacity duration-300" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            observer.observe(card);
+        });
+
+        // ==========================================
+        // SECURITY / ANTI-DEVTOOLS BARRIER
+        // ==========================================
+        document.addEventListener('contextmenu', event => {
+            event.preventDefault();
+            alert('Security Barrier: Inspecting this secure area is not allowed.');
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.keyCode === 123 || // F12
+                (event.ctrlKey && event.shiftKey && event.keyCode === 73) || // Ctrl+Shift+I
+                (event.ctrlKey && event.shiftKey && event.keyCode === 74) || // Ctrl+Shift+J
+                (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+                (event.metaKey && event.altKey && event.keyCode === 73)) // Cmd+Option+I (Mac)
+            { 
+                event.preventDefault();
+                alert('Security Barrier: Developer tools are disabled on this network.');
+                return false;
+            }
+        });
+
+        // ==========================================
+        // ADMIN PANEL & CLIENT SLIDER LOGIC
+        // ==========================================
+        
+        let typedCode = '';
+        const secretCode = 'admin@bridge';
+        let bgClicked = false;
+        let bgClickTimeout;
+
+        // Require left click on background to start listening for the secret code
+        document.addEventListener('click', (e) => {
+            // Check if it's mostly a background click (not an input, button, etc)
+            if (!['INPUT', 'BUTTON', 'A', 'TEXTAREA'].includes(e.target.tagName)) {
+                bgClicked = true;
+                clearTimeout(bgClickTimeout);
+                bgClickTimeout = setTimeout(() => { bgClicked = false; typedCode = ''; }, 10000); // 10s window to type code
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!bgClicked) return; // Must have clicked background recently
+            
+            typedCode += e.key;
+            if (typedCode.length > secretCode.length) {
+                typedCode = typedCode.slice(-secretCode.length);
+            }
+            if (typedCode === secretCode) {
+                document.getElementById('admin-modal').classList.remove('hidden');
+                typedCode = ''; // reset
+                bgClicked = false; // reset
+            }
+        });
+
+        const loadClients = () => {
+            const clients = JSON.parse(localStorage.getItem('bridge_clients') || '[]');
+            const sliderTrack = document.getElementById('slider-track');
+            const clientCount = document.getElementById('client-count');
+            const clientsSection = document.getElementById('clients');
+            const adminPartnerList = document.getElementById('admin-partner-list');
+
+            clientCount.textContent = `(${clients.length})`;
+            sliderTrack.innerHTML = '';
+            
+            // Render Admin List
+            if (adminPartnerList) {
+                adminPartnerList.innerHTML = '';
+                if (clients.length === 0) {
+                    adminPartnerList.innerHTML = '<p class="text-sm text-secondary-fixed-dim">No partners added.</p>';
+                } else {
+                    clients.forEach((client, index) => {
+                        const item = document.createElement('div');
+                        item.className = 'flex justify-between items-center bg-surface p-3 rounded-lg border border-white/5';
+                        item.innerHTML = `
+                            <div class="flex items-center gap-3">
+                                <img src="${client.logo}" class="w-8 h-8 rounded-full object-cover border border-white/10">
+                                <span class="text-sm text-primary">${client.name}</span>
+                            </div>
+                            <button onclick="deletePartner(${index})" class="text-error hover:text-red-400 p-1 transition-colors"><span class="material-symbols-outlined text-sm">delete</span></button>
+                        `;
+                        adminPartnerList.appendChild(item);
+                    });
+                }
+            }
+
+            if (clients.length > 0) {
+                clientsSection.classList.remove('hidden');
+                clients.forEach(client => {
+                    const el = document.createElement('div');
+                    el.className = 'flex flex-col items-center gap-4 bg-surface-container-high/50 p-6 rounded-2xl border border-white/5 min-w-[250px]';
+                    el.innerHTML = `
+                        <div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center overflow-hidden">
+                            <img src="${client.logo}" alt="${client.name}" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-headline-lg text-xl text-primary">${client.name}</h4>
+                    `;
+                    sliderTrack.appendChild(el);
+                });
+            } else {
+                clientsSection.classList.add('hidden');
+            }
+        };
+
+        window.deletePartner = (index) => {
+            const clients = JSON.parse(localStorage.getItem('bridge_clients') || '[]');
+            clients.splice(index, 1);
+            localStorage.setItem('bridge_clients', JSON.stringify(clients));
+            loadClients();
+        };
+
+        document.getElementById('admin-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('client-name').value;
+            const logo = document.getElementById('client-logo').value;
+            
+            const clients = JSON.parse(localStorage.getItem('bridge_clients') || '[]');
+            clients.push({ name, logo });
+            localStorage.setItem('bridge_clients', JSON.stringify(clients));
+            
+            document.getElementById('client-name').value = '';
+            document.getElementById('client-logo').value = '';
+            
+            loadClients();
+        });
+
+        // Initialize Slider & Load Data
+        loadClients();
+
+        // Basic Drag & Auto Scroll Logic
+        const sliderContainer = document.getElementById('slider-container');
+        const sliderTrack = document.getElementById('slider-track');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let animationId;
+
+        sliderContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            cancelAnimationFrame(animationId);
+            startX = e.pageX - sliderContainer.offsetLeft;
+            scrollLeft = sliderContainer.scrollLeft;
+        });
+        sliderContainer.addEventListener('mouseleave', () => { isDown = false; autoScroll(); });
+        sliderContainer.addEventListener('mouseup', () => { isDown = false; autoScroll(); });
+        sliderContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - sliderContainer.offsetLeft;
+            const walk = (x - startX) * 2;
+            sliderContainer.scrollLeft = scrollLeft - walk;
+        });
+        sliderContainer.addEventListener('touchstart', (e) => {
+            isDown = true;
+            cancelAnimationFrame(animationId);
+            startX = e.touches[0].pageX - sliderContainer.offsetLeft;
+            scrollLeft = sliderContainer.scrollLeft;
+        });
+        sliderContainer.addEventListener('touchend', () => { isDown = false; autoScroll(); });
+        sliderContainer.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - sliderContainer.offsetLeft;
+            const walk = (x - startX) * 2;
+            sliderContainer.scrollLeft = scrollLeft - walk;
+        });
+
+        function autoScroll() {
+            if (isDown) return;
+            sliderContainer.scrollLeft += 1;
+            // Loop scroll if we reached the end
+            if (sliderContainer.scrollLeft >= sliderTrack.scrollWidth - sliderContainer.clientWidth) {
+                // Not a true infinite loop right now, but bounces back or just stops depending on preference.
+                // Simple infinite loop trick: if we reach end, reset to start.
+                sliderContainer.scrollLeft = 0; 
+            }
+            animationId = requestAnimationFrame(autoScroll);
+        }
+
+        // Only start autoScroll if there are clients
+        if (JSON.parse(localStorage.getItem('bridge_clients') || '[]').length > 0) {
+            autoScroll();
+        }
+
+    </script>
+
+<!-- Admin Modal -->
+<div id="admin-modal" class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-surface-container-high p-8 rounded-xl max-w-md w-full border border-white/10 shadow-2xl my-8">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-headline-xl text-primary">Admin Panel</h2>
+            <button onclick="document.getElementById('admin-modal').classList.add('hidden')" class="text-secondary hover:text-white transition-colors"><span class="material-symbols-outlined">close</span></button>
+        </div>
+        
+        <!-- Add Partner Form -->
+        <form id="admin-form" class="space-y-4 mb-8">
+            <h3 class="font-label-sm uppercase tracking-widest text-primary mb-2 border-b border-white/10 pb-2">Add Partner</h3>
+            <div>
+                <label class="block text-sm font-label-sm uppercase tracking-widest text-secondary mb-2">Client Name</label>
+                <input type="text" id="client-name" required class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary">
+            </div>
+            <div>
+                <label class="block text-sm font-label-sm uppercase tracking-widest text-secondary mb-2">Client Logo URL</label>
+                <input type="text" id="client-logo" required placeholder="https://..." class="w-full bg-surface border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary">
+            </div>
+            <button type="submit" class="w-full py-3 bg-primary text-black font-label-sm uppercase tracking-widest rounded-lg hover:bg-white/90 transition-colors">Add Partner</button>
+        </form>
+
+        <!-- Manage Partners -->
+        <div>
+            <h3 class="font-label-sm uppercase tracking-widest text-primary mb-4 border-b border-white/10 pb-2">Manage Partners</h3>
+            <div id="admin-partner-list" class="space-y-3 max-h-60 overflow-y-auto pr-2 custom-scrollbar">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact-modal" class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-surface-container-high p-8 rounded-xl max-w-lg w-full border border-white/10 shadow-2xl relative overflow-hidden">
+        <!-- background accent -->
+        <div class="absolute -top-20 -right-20 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+        <div class="flex justify-between items-center mb-6 relative z-10">
+            <h2 class="text-3xl font-display-lg text-primary">Let's Build</h2>
+            <button onclick="document.getElementById('contact-modal').classList.add('hidden')" class="text-secondary hover:text-white"><span class="material-symbols-outlined">close</span></button>
+        </div>
+        <form class="space-y-4 relative z-10" onsubmit="event.preventDefault(); alert('Message sent!'); document.getElementById('contact-modal').classList.add('hidden');">
+            <div>
+                <label class="block text-sm font-label-sm uppercase tracking-widest text-secondary mb-2">Your Name</label>
+                <input type="text" required class="w-full bg-surface border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors">
+            </div>
+            <div>
+                <label class="block text-sm font-label-sm uppercase tracking-widest text-secondary mb-2">Email</label>
+                <input type="email" required class="w-full bg-surface border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors">
+            </div>
+            <div>
+                <label class="block text-sm font-label-sm uppercase tracking-widest text-secondary mb-2">Message</label>
+                <textarea rows="4" required class="w-full bg-surface border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors"></textarea>
+            </div>
+            <button type="submit" class="w-full py-4 mt-2 bg-primary text-black font-label-sm uppercase tracking-widest rounded-lg hover:bg-white/90 transition-colors">Send Message</button>
+        </form>
+    </div>
+</div>
+
+</body></html>
